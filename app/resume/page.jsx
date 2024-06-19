@@ -1,5 +1,5 @@
 "use client";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaBootstrap, } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaBootstrap, FaGitAlt, } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiExpress, SiMongodb, SiSpringboot } from "react-icons/si"
 
 
@@ -42,6 +42,11 @@ const experience = {
   description: "Following are the roles of responsibility that I have been in.",
   items: [
     {
+      company: "D.E. Shaw India",
+      position: "DESIS Ascend Educare Mentee",
+      duration: "October 2023 - March 2024"
+    },
+    {
       company: "Codame, IIIT Bhopal",
       position: "Competitive Programming Executive",
       duration: "2023 - present"
@@ -72,14 +77,14 @@ const education = {
       degree: "Class XII",
       specialization: "Physics, Chemistry and Mathematics",
       duration: "2020 - 2021",
-      grade: "9.25",
+      grade: "92.5%",
     },
     {
       institution: "St. Mary's Convent Inter College Allahabad",
       degree: "Class X",
       specialization: "Computer Applications",
       duration: "2018 - 2019",
-      grade: "9.58",
+      grade: "95.8%",
     },
   ]
 }
@@ -122,10 +127,6 @@ const skills = {
       name: "Next.js"
     },
     {
-      icon: <SiSpringboot />,
-      name: "Springboot"
-    },
-    {
       icon: <FaBootstrap />,
       name: "Bootstrap"
     },
@@ -137,12 +138,16 @@ const skills = {
       icon: <FaFigma />,
       name: "Figma"
     },
+    {
+      icon: <FaGitAlt />,
+      name: "Git"
+    },
 
   ]
 }
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 import { motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -174,7 +179,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-6xl text-accent font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{experience.description}</p>
-                <Timelineexp/>
+                <Timelineexp />
               </div>
             </TabsContent>
 
@@ -215,19 +220,27 @@ const Resume = () => {
                   <h3 className="text-6xl text-accent font-bold">{skills.title}</h3>
                   <p className="text-white/60">{skills.description}</p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index)=>{
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[20px]">
+                  {skills.skillList.map((skill, index) => {
                     return <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[120px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
+                      {/* <TooltipProvider delayDuration={100}>
+                        <Tooltip> */}
+                      {/* <TooltipTrigger className="w-full h-[120px] bg-[#232329] rounded-xl flex justify-center items-center group"> */}
+                      <div className="w-full h-[140px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group">
+                        <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+
+                        <div>
+                          <div className="text-sm mt-5 group-hover:text-accent transition-all duration-300">{skill.name}</div>
+                        </div>
+                      </div>
+
+
+                      {/* </TooltipTrigger> */}
+                      {/* <TooltipContent> */}
+                      {/* <p className="capitalize">{skill.name}</p> */}
+                      {/* </TooltipContent> */}
+                      {/* </Tooltip>
+                      </TooltipProvider> */}
                     </li>
                   })}
                 </ul>

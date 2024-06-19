@@ -5,42 +5,38 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
 const links = [
     {
-        name: 'home',
-        path: '/'
+        name:'home',
+        path:'/'
     },
     {
-        name:'services',
-        path:'/services'
+      name:'About Me',
+      path:'/about'
     },
     {
-        name: 'resume',
-        path: '/resume'
+        name:'resume',
+        path:'/resume'
     },
     {
-        name: 'work',
-        path: '/work'
+        name:'work',
+        path:'/work'
     },
     {
-        name: 'contact',
-        path: '/contact'
+      name: 'contact',
+      path: '/contact'
     },
-    {
-        name: 'random',
-        path: '/random'
-    },
-
+    
 ]
 
 const MobileNav = () => {
     const pathname = usePathname();
     return (
-        <Sheet>
+        <Sheet className="">
             <SheetTrigger className="flex justify-center items-center">
                 <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
-            <SheetContent className="flex flex-col">
+            <SheetContent className="flex flex-col items-center justify-center">
                 {/*logo */}
-                <div className="mt-32 mb-40 text-center text-2xl">
+                <div className="mt-24 mb-20 text-center text-2xl">
                     <Link href="/">
                         <h1 className="text-4xl font-semibold">
                             Rashi<span className="text-accent">.</span>

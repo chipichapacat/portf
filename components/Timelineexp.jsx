@@ -6,6 +6,15 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 const timelineElements = [
     {
         id: 1,
+        position: "DESIS Ascend Educare Mentee",
+        date: "Oct 2023 - March 2024",
+        company: "D.E. Shaw India",
+        location: "remote",
+        icon: "/assets/work/workp.jpeg",
+        direction: "left"
+    },
+    {
+        id: 2,
         position: "Competitive Programming Executive",
         date: "Nov 2023 - Present",
         company: "Codame, IIIT Bhopal",
@@ -14,9 +23,9 @@ const timelineElements = [
         direction: "right"
     },
     {
-        id: 1,
+        id: 3,
         position: "Teaching Assistant",
-        date: "Jan 2024 - May - 2024",
+        date: "Jan 2024 - May 2024",
         company: "IIIT Bhopal",
         location: "Bhopal, Madhya Pradesh",
         icon: "/assets/work/workp.jpeg",
@@ -48,19 +57,32 @@ const Timelineexp = () => {
 
             <div className="timeline-item mb-[40px] w-[100%] relative last:mb-0 odd:pr-[calc(50%+30px)] odd:text-right  even:pl-[calc(50%+30px)] even:text-left">
                 <div className="timeline-dot h-[21px] w-[21px] bg-accent absolute left-[calc(50%-8px)] rounded-3xl top-[10px]"></div>
-                    <div className='bg-[#27272c] p-5 rounded-xl'>
-                        <div className="timeline-position text-accent text-lg">
-                            {timelineElements[1].position}
-                        </div>
-                        <div className="timeline-company mt-5 text-white/60">
-                            {timelineElements[1].company}
-                        </div>
-                        <div className="timeline-date">
-                            {timelineElements[1].date}
-                        </div>
+                <div className='bg-[#27272c] p-5 rounded-xl'>
+                    <div className="timeline-position text-accent text-lg">
+                        {timelineElements[1].position}
                     </div>
+                    <div className="timeline-company mt-5 text-white/60">
+                        {timelineElements[1].company}
+                    </div>
+                    <div className="timeline-date">
+                        {timelineElements[1].date}
+                    </div>
+                </div>
+            </div>
 
-                
+            <div className="timeline-item mb-[40px] w-[100%] relative last:mb-0 odd:pr-[calc(50%+30px)] odd:text-right  even:pl-[calc(50%+30px)] even:text-left">
+                <div className="timeline-dot h-[21px] w-[21px] bg-accent absolute left-[calc(50%-8px)] rounded-3xl top-[10px]"></div>
+                <div className='bg-[#27272c] p-5 rounded-xl'>
+                    <div className="timeline-position text-accent text-lg">
+                        {timelineElements[2].position}
+                    </div>
+                    <div className="timeline-company mt-5 text-white/60">
+                        {timelineElements[2].company}
+                    </div>
+                    <div className="timeline-date">
+                        {timelineElements[2].date}
+                    </div>
+                </div>
             </div>
         </div>
     )

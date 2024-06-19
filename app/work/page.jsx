@@ -16,41 +16,51 @@ const projects = [
     num: '1',
     category: 'Full-Stack',
     title: "iNoteBook",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    description: "Developed a full-stack note-taking web application allowing users to create and save notes securely in the cloud. Implemented user authentication and authorization with JWT,with 100+ lines of code, enabling account creation and secure login for personal note storage. Enhanced user experience by implementing CRUD operations and responsive design",
     stack: [{ name: "MongoDB" }, { name: "Express.js" }, { name: "React.js" }, { name: "Node.js" }],
-    image: '/assets/work/workp.jpeg',
+    image: '/assets/work/iNotebook.png',
     link: "",
-    github: "",
+    github: "https://github.com/RaashiK16/iNotebook2",
   },
   {
     num: '2',
     category: 'Full-Stack',
     title: "CodeOnTheGo",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    description: "Designed and built a real-time online collaborative coding platform enabling users to create rooms, generate unique Room IDs and collaborate with other users by sharing the Room ID. Implemented room management, allowing users to create, join, and collaborate in coding sessions securely. Integrated CodeMirror for a rich code editing experience with syntax highlighting and support for 3+ languages.",
     stack: [{ name: "React.js" }, { name: "Node.js" }, { name: "Socket.IO" }],
-    image: '/assets/work/workp.jpeg',
+    image: '/assets/work/codeonthego.png',
     link: "",
-    github: "",
+    github: "https://github.com/RaashiK16/CodeOnTheGo",
   },
   {
     num: '3',
     category: 'Frontend',
     title: "TextToSpeech",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "Javascript" }],
-    image: '/assets/work/workp.jpeg',
-    link: "",
-    github: "",
+    description: "Built a tool that converts text written into speech. Provided functionality for various languages and accents.",
+    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "Javascript" },{name: "TextToSpeech API"}],
+    image: '/assets/work/texttospeech.png',
+    link: "https://raashik16.github.io/TexttoSpeech/",
+    github: "https://github.com/RaashiK16/TexttoSpeech",
   },
   {
     num: '4',
     category: 'Frontend',
     title: "Weather-App",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    description: "Built a weather app using the weather API.",
     stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "Javascript" }, { name: "Weather API" }],
-    image: '/assets/work/workp.jpeg',
-    link: "",
-    github: "",
+    image: '/assets/work/weatherapp.png',
+    link: "https://raashik16.github.io/WeatherApp/",
+    github: "https://github.com/RaashiK16/WeatherApp",
+  },
+  {
+    num: '5',
+    category: 'Frontend',
+    title: "KnowledgeNest",
+    description: "Built the frontend framework of an edu-tech website.",
+    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "Bootstrap" }],
+    image: '/assets/work/knowledgenest.png',
+    link: "https://raashik16.github.io/KnowledgeNest/",
+    github: "https://github.com/RaashiK16/KnowledgeNest",
   },
 ]
 
@@ -145,13 +155,13 @@ const Work = () => {
 
               {projects.map((project,index)=>{
                 return <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[400px] relative group flex justify-center items-center object-contain bg-pink-50/20">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
 
                     {/* image */}
-                    <div className="relative w-full h-full">
-                      <Image src={project.image} fill className="object-cover" alt=""/>
+                    <div className="relative w-full h-full border border-accent">
+                      <Image src={project.image} fill className="object-fill " alt=""/>
                     </div>
                   </div>
                 </SwiperSlide>

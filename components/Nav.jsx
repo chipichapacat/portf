@@ -8,8 +8,8 @@ const links = [
         path:'/'
     },
     {
-      name:'services',
-      path:'/services'
+      name:'About Me',
+      path:'/about'
     },
     {
         name:'resume',
@@ -20,13 +20,9 @@ const links = [
         path:'/work'
     },
     {
-        name:'contact',
-        path:'/contact'
+      name: 'contact',
+      path: '/contact'
     },
-    {
-      name: 'random',
-      path: '/random'
-  },
     
 ]
 const Nav = () => {

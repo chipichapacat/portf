@@ -113,7 +113,7 @@ const Work = () => {
               </ul>
 
               {/* border */}
-              <div className="border border-white/20 mt-5 mb-5"></div>
+              <div className="border border-white/20 mb-5"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* Live project button */}

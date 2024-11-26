@@ -28,7 +28,7 @@ const Home = () => {
               variant="outline" 
               size="lg" 
               className="uppercase flex items-center gap-2">
-                <a href="https://drive.google.com/file/d/1EyAqKZILpLN2TWnnbmDUQjvU7yezGGFx/view?usp=drive_link" target="_blank" class="cta" download="Rashi_Kulshreshtha_resume">View Resume</a>
+                <a href="https://drive.google.com/file/d/1ILx1gzEt7ywknyzrDK4y6BOYMx57wXI_/view?usp=sharing" target="_blank" class="cta" download="Rashi_Kulshreshtha_resume">View Resume</a>
                 {/* <FiDownload className="text-3xl"/> */}
               </Button>
               {/* <div className="mb-8 xl:mb-0">
